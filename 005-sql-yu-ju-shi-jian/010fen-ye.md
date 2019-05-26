@@ -33,6 +33,9 @@ select * from stu group by sex limit 0,3;
 ```
 // 表示的是查询最前面5条数据
 select * from stu limit 5;
+// 等价于
+select * from stu limit 0,5;
+
 ```
 
 <br>
