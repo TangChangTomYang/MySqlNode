@@ -114,5 +114,24 @@ inner join scores on courses.courseNo=scores.courseNo;
 <br>
 #### 三、连接查询 后过滤
 
+例1: 查询 '王昭君'的数据库成绩, 要求显示 姓名、课程名、成绩
+```
+select 
+    * 
+from 
+    student, courses, scores
+where 
+student.studentNo=courses.studentNo
+and courses.coureNo=scores.courseNo
+and student.name='王昭君' 
+and course.name='数据库';
+```
+
+
+
+
+<br>
+#### 四、左连接
+
 
 
