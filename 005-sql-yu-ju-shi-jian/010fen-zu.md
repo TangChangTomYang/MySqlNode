@@ -85,9 +85,19 @@ select sex count(*) from stu group by sex having sex='男';
 
 例2: 查询1班外其他班级的平均年龄, 最大年龄, 最小年龄
 
+```
+// 先条件过滤, 在分组
+select class, avg(age), max(age), min(age) from stu where class1='1班' group by class;
+
+// 先分组, 再过滤
+select class, avg(age), max(age), min(age) from stu group by class having class!='1班';
+```
 
 
 
 
 <br>
 #### 三、对比 where 与 having
+
+- where 是对 from 后面指定的表进行数据筛选, 属于对原始数据的筛选
+- having 是对group by 的结果进行筛选
