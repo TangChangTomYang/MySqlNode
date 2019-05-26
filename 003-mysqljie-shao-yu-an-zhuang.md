@@ -20,8 +20,7 @@ MySQL 是一个关系型数据库管理系统, 由瑞典MySQL AB公司开发, �
 - MySQL使用标准的SQL数据语言形式
 - MySQL 可以是定制的, 采用了GPL 协议, 你可以修改源代码来开发自己的MySql系统.
 
-
-
+ ****
 <br>
 #### windows 平台MySQL 的安装
 
