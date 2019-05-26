@@ -32,7 +32,7 @@
 select * from 表1, 表2 where 表1.列=表2.列
 ```
 
-**2、方式2:** (又称为内连接)
+**2、方式2:** (又称为内连接) **(推荐使用)**
 ```
 select * from 表1
 inner join 表2 on 表1.列=表2.列;
@@ -47,6 +47,13 @@ from
     Scores as sc
 where 
     stu.studentNo = sc.studentNo;
+-----------------------------------
+select 
+    * 
+from 
+    student as stu
+inner join scores as sc on stu.studentNo=sc.studentNo;
+
 ```
 
 
