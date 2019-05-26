@@ -134,4 +134,45 @@ and course.name='数据库';
 #### 四、左连接
 
 
+左连接代表的是左边的表, join 前边的表相对于join后边的表就是左表.
+
+左连接的特点是, 把左边的表全部显示出来, 右边没有数据的记录就以null 补全
+
+
+```
+select  * from 表1
+left join 表2 on 表1.列=表2.列;
+```
+例1: 查询所有学生的成绩, 包括没有成绩的学生
+```
+select 
+    * 
+from
+    student as stu
+left join scores as sc on stu.studentNo=sc.studentNo;
+```
+
+例2: 查询所有学生的成绩, 包括没有成绩的学生, 需要显示课程名
+```
+select
+    * 
+from 
+    student as stu
+left join scores as sc on stu.studentNo=sc.studentNo
+left join courses as cs on sc.courseNo=cs.courseNo;
+```
+
+
+
+
+<br>
+#### 右连接
+
+右连接, 就是把右边的表全部显示出来, 左边没有对应记录的信息, 就用null值填充.
+
+
+
+
+<br>
+#### 左连接、右连接、inner join  综合使用
 
