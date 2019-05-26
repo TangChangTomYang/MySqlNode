@@ -111,5 +111,8 @@ inner join scores on courses.courseNo=scores.courseNo;
 
 
 
+<br>
+#### 三、连接查询 后过滤
+
 
 
