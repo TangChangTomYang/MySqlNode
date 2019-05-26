@@ -41,5 +41,53 @@ select class, avy(age), min(age), max(age), count(age) from stu group by class;
 select class as 班级名称, avy(age) as 平均年龄, min(age) as 最小年龄, max(age) as 最大年龄, count(age) as 总人数 * from stu group by class;
 ``` 
 
+
+例4: 查询各班级, 男生、女生的人数(即先按班级分组, 再按性别分组)
+```
+// 多个分组之间使用逗号隔开
+select class , sex , count(*) from stu group by class,sex;
+
+```
+
+
+
+
+
+
+
+<br>
+
 #### 二、分组后的数据筛选
 
+
+语法:
+
+```
+select 列1, 列2, 聚合... from 表名
+group by 列1, 列2, 列3...
+having 列1,... 聚合 ...
+```
+> having 后面的条件运算符与where 相同
+
+
+<br>
+例1: 查询男生总人数
+```
+方案1:
+select sex count(*) from stu where sex='男';
+
+方案2: 
+select sex count(*) from stu group by sex having sex='男';
+
+// having sex='男' 表示的就是在分组后再过滤, 相当于 where sex='男', 当是在 分组后面只能使用 having 列=value 不能使用where 
+```
+
+
+例2: 查询1班外其他班级的平均年龄, 最大年龄, 最小年龄
+
+
+
+
+
+<br>
+#### 三、对比 where 与 having
