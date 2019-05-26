@@ -28,5 +28,122 @@
 
 #### 后期联系的准备数据
 
+drop table if exists stu;
+create table stu(
+    stuNo varchar(10) primary key,
+    name varchar(10),
+    sex varchar(1),
+    homeTown varchar(20),
+    age tinyint(4),
+    class varchar(10),
+    cardId varchar(20)
+);
+
+insert into stu values
+('001', '王昭君','女', '北京', '20', '1班', '51012419901010'),
+('002', '诸葛亮','男', '上海', '25', '1班', '51012419901010'),
+('003', '张飞','男', '成都', '44', '2班', '51012419901010'),
+('004', '白起','男', '北京', '20', '1班', '51012419901010'),
+('005', '大乔','女', '上海', '44', '3班', '51012419901010'),
+('006', '小乔','女', '广东', '34', '1班', '51012419901010'),
+('007', '孙尚香','女', '四川', '34', '1班', '51012419901010'),
+('008', '吕布','男', '江苏', '54', '2班', '51012419901010'),
+('009', '张飞','男', '成都', '34', '1班', '51012419901010'),
+('010', '关于','男', '天津', '43', '4班', '51012419901010'),
+('011', '赵云','男', '河北', '43', '1班', '51012419901010'),
+('012', '貂蝉','女', '云南', '20', '3班', '51012419901010');
+
+
+
+
+
+```
+drop table if exists courses;
+create table course (
+    courseNo int(10) unsigned primary key auto_increment,
+    name varchar(10)
+);
+
+insert into courses values
+('1', '数据库'),
+('2', 'qtp'),
+('3', 'Linux'),
+('4', '系统测试'),
+('5', '单元测试'),
+('6', '测试过程');
+
+drop table if exists scores;
+create table scores(
+    id int(10) unsigned primary key auto_increment,
+    courseNo int(0),
+    stuNo varchar(10),
+    score tinyint(4)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

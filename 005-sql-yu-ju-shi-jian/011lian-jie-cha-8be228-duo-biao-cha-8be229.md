@@ -23,26 +23,37 @@
 
 
 
-准备数据
+
+<br>
+#### 二、等值连接
+
+**1、方式1:**
 ```
-drop table if exists courses;
-create table course (
-    courseNo int(10) unsigned primary key auto_increment,
-    name varchar(10)
-);
+select * from 表1, 表2 where 表1.列=表2.列
+```
 
-insert into courses values
-('1', '数据库'),
-('2', 'qtp'),
-('3', 'Linux'),
-('4', '系统测试'),
-('5', '单元测试'),
-('6', '测试过程');
+**2、方式2:** (又称为内连接)
+```
+select * from 表1
+inner join 表2 on 表1.列=表2.列;
+```
 
-drop table if exists scores;
-create table scores(
-    id int(10) unsigned primary key auto_increment,
-    courseNo int(0),
-    stuNo varchar(10),
-    score tinyint(4)
-);
+例1: 查询学生表信息及学生的成绩
+```
+select 
+    * 
+from
+    Student as stu,
+    Scores as sc
+where 
+    stu.studentNo = sc.studentNo;
+```
+
+
+> 等值连接的2种方式,是有差异的
+"select * from 表1, 表2 where 表1.列=表2.列" 方式会产生笛卡尔积, 然后在过滤, 内存开销要大些
+"select * from 表1 inner join 表2 on 表1.列=表2.列;" 会判断是否满足条件在链接,内存开销要小些.
+
+
+
+
