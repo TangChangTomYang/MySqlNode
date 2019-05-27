@@ -94,6 +94,17 @@ select * from stu where (sex,age) = (select sex, age from stu order by age desc 
 
 
 <br>
-#### 四、表量子查询
+#### 四、表级子查询
 
 前面讲的 标量子查询/ 列子查询/ 行子查询, 其查询结构都是作为 where 的条件的.
+
+
+
+例:查询数据库和系统测试的课程成绩
+```
+select
+    * 
+from
+    scores as sc
+inner join (select * from courses where name in ('数据库', '系统测试')) as cs on sc.courseNo = cs.courseNo;
+```
