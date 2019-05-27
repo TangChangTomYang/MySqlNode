@@ -102,9 +102,19 @@ select * from stu where (sex,age) = (select sex, age from stu order by age desc 
 
 例:查询数据库和系统测试的课程成绩
 ```
+方式1: 
+select * from scorse
+inner join courses on scores.courseNo=courses.courseNo
+where courses.name in ('数据库' , '系统测试');
+
+// 方式1的缺点是, 先查询生成一个大的表, 在将表数据过滤
+
+
 select
     * 
 from
     scores as sc
 inner join (select * from courses where name in ('数据库', '系统测试')) as cs on sc.courseNo = cs.courseNo;
+
+// 方式2的有点, 数据量小, 效率高些
 ```
