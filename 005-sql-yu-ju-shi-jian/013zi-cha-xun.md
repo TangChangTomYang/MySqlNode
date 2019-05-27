@@ -137,15 +137,39 @@ inner join (select * from courses where name in ('数据库', '系统测试')) a
  
 - **in** 范围
     - 格式: 主查询 where 条件 in (列子查询)
-- **any | some** 任意一个
+- **any | some** 任意一个 (any 和 some 是一样的意思)
     - 格式: 主查询 where 列 = any (列子查询)
+    - 格式: 主查询 where 列 = some (列子查询)
     - 在条件查询的结果中匹配任意一个即可, 等价于in
 - **all**
     - 格式: 主查询 where 列= all(列子查询):等于里面所有
     - 格式: 主查询 where 列 <>all (列子查询):不等于其中所有
     
 
+```
+select * from stu where in (select age from stu where age between 18 and 20);
 
+// =any 相当于in
+select * from stu where =any(select age from stu where age between 18 and 20);
+
+// =some 相当于in
+select * from stu where =some(select age from stu where age between 18 and 20);
+
+
+// >any 相当于大于其中一个最小的
+select * from stu where >any(select age from stu where age between 18 and 20);
+
+// <any 相当于小于其中一个最大的
+select * from stu where >any(select age from stu where age between 18 and 20);
+
+
+// !=any 没有意义 (语义没错, 但是不能这么写没意义)
+select * from stu where !=any(select age from stu where age between 18 and 20);
+
+
+
+// =all 是没有意义的, 只有大于小于!=才有意义
+```
 
 
 
