@@ -108,7 +108,7 @@ inner join courses on scores.courseNo=courses.courseNo
 where courses.name in ('数据库' , '系统测试');
 
 // 方式1的缺点是, 先查询生成一个大的表, 在将表数据过滤
-
+// 相当于在一大堆数据中在去过滤
 
 select
     * 
@@ -118,3 +118,14 @@ inner join (select * from courses where name in ('数据库', '系统测试')) a
 
 // 方式2的有点, 数据量小, 效率高些
 ```
+
+
+
+**注意: **
+> 
+(1) select * from 表名, 这个表名代表的是一个数据源.
+(2) select * from 表名1 inner join 表名2 on where xxx,  表名1 和 表名2 都是代表的是数据源
+(3) 在sql 语句中除了表名可以代表数据源, 查询到的记录也可以作为数据源.
+
+
+
