@@ -18,7 +18,7 @@
 
 
 <br>
-#### 标量子查询
+#### 一、标量子查询
 
 例1: 查询班级学生的平均年龄
 ```
@@ -57,7 +57,7 @@ select score from scores where stuNo = (select stuNo from stu where name = '王�
 
 
 <br>
-#### 列量子查询
+#### 二、列量子查询
 
 例1: 查询18岁的学生的成绩, 要求显示成绩
 ```
@@ -66,8 +66,11 @@ select * from scores where scores.stuNo in (select  stuNo from stu where age = 1
 **特点:**
 > 子查询返回的结果是1列多行
 
+
+
+
 <br>
-#### 行子查询
+#### 三、行子查询
 
 例1: 查询男生中年龄最大的学生信息
 ```
@@ -83,3 +86,14 @@ select * from stu where (sex,age) = (select sex, age from stu order by age desc 
 
 **特点:**
 > 子查询返回的结果是一行多列
+
+
+
+
+
+
+
+<br>
+#### 四、表量子查询
+
+前面讲的 标量子查询/ 列子查询/ 行子查询, 其查询结构都是作为 where 的条件的.
