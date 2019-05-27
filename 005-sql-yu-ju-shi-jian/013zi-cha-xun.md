@@ -44,7 +44,10 @@ select score from scores where stuNo = 20;
 select score from scores where stuNo = (select stuNo from stu where name = '王昭君');
 ```
 
+**特点:**
+> 子查询的结果是一行一列
 
+<br>
 **注意:**
 > 
 (1)虽然我们使用普通的多条查询语句, 可以实现标量子查询语句 (嵌套查询)的功能, 当是我们不推荐. 因为多条语句在执行时, 有可能语句与语句之间有其它的变化, 数据有风险. 
@@ -60,3 +63,23 @@ select score from scores where stuNo = (select stuNo from stu where name = '王�
 ```
 select * from scores where scores.stuNo in (select  stuNo from stu where age = 18);
 ```
+**特点:**
+> 子查询返回的结果是1列多行
+
+<br>
+#### 行子查询
+
+例1: 查询男生中年龄最大的学生信息
+```
+select * from stu where sex='男' and age = 26;
+
+// 也可以这样写
+select * from stu where (sex,age) = ('男',26);
+
+// 也可以这样写(行子查询)
+select * from stu where (sex,age) = (select sex, age from stu order by age desc limit 1);
+``` 
+
+
+**特点:**
+> 子查询返回的结果是一行多列
