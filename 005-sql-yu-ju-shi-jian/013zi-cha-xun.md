@@ -28,6 +28,8 @@ select avg(age) from stu;
 // 查询大于平均年龄的学生
 select * from stu where age > 20;
 
+
+// 标量子查询
 select * from stu where age > (select avg(age) from stu);
 ```
 
@@ -41,3 +43,8 @@ select score from scores where stuNo = 20;
 
 select score from scores where stuNo = (select stuNo from stu where name = '王昭君');
 ```
+
+
+**注意:**
+> 虽然我们使用普通的多条查询语句, 可以实现标量子查询语句 (嵌套查询)的功能, 当是我们不推荐. 因为多条语句在执行时, 有可能语句与语句之间有其它的变化, 数据有风险.
+
