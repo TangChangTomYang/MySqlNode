@@ -52,11 +52,11 @@
 select 
     * 
 from 
-    areas as pareas , 
-    aerea as careas
+    areas as sheng , 
+    aerea as shi
 where  
-    careas.pid = pareas.aid
-    and pareas.atitle="河南省";
+    shi.pid = sheng.aid
+    and sheng.atitle="河南省";
 ```
 
 例2: 查询所有的省

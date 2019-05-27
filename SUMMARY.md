@@ -20,5 +20,6 @@
   * [010-分页](005-sql-yu-ju-shi-jian/010fen-ye.md)
   * [011-连接查询\(多表查询\)\*](005-sql-yu-ju-shi-jian/011lian-jie-cha-8be228-duo-biao-cha-8be229.md)
   * [012-自关联](005-sql-yu-ju-shi-jian/012zi-guan-lian.md)
+  * [013-子查询](005-sql-yu-ju-shi-jian/013zi-cha-xun.md)
   * [查询练习](005-sql-yu-ju-shi-jian/cha-xun-lian-xi.md)
 
