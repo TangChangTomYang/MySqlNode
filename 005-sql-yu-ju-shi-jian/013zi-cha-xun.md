@@ -16,4 +16,28 @@
 - 行子查询: 返回的结果是一行(一行多列)
 - 表级子查询: 返回的结果是多行多列
 
+
+<br>
 #### 标量子查询
+
+例1: 查询班级学生的平均年龄
+```
+// 查询班级学生的平均年龄
+select avg(age) from stu;
+
+// 查询大于平均年龄的学生
+select * from stu where age > 20;
+
+select * from stu where age > (select avg(age) from stu);
+```
+
+例2: 查询王昭君的成绩, 要求显示成绩
+```
+//学生表中查询王昭君的学号
+select stuNo from stu where name = '王昭君';
+
+// 成绩表中根据学号查询成绩
+select score from scores where stuNo = 20;
+
+select score from scores where stuNo = (select stuNo from stu where name = '王昭君');
+```
