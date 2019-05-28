@@ -4,7 +4,8 @@
 #### 内置函数
 
 
-#### 字符串函数
+<br>
+#### 一、字符串函数
 
 **1、拼接字符串 concat(str1, str2 ...)**
 
@@ -52,9 +53,33 @@ select name, sex, concat(substring(name,0,3), sex) from stu ;
 **4、去除空格**
 - ltrim(str) 返回删除了左空格的字符串str
 - rtrim(str) 返回删除了右空格的字符串str
+
+ **格式:** 
+ > select ltrim('   abc   ');
  
-    
-       
+ 
+ <br>
+ **5、大小写转换**
+ - lower(str)
+ - upper(str)
+ 
+ **格式:**
+ > select lower('aBcD');
+ 
+ 
+ 
+ 
+ 
+<br>
+#### 二、数学函数
+
+**1、求四舍五入值**
+ 
+** 格式:**
+> select round(n,d); // n表示的是原数, d 表示的是小数位数默认为0
+
+
+**2、求 x的y次幂 pow(x,y)**       
  
 
      
