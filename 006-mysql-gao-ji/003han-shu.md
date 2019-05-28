@@ -15,6 +15,7 @@ select concat(12,34,'ab');
 ```
 select length('abc');
 ```
+> 注意: select length(str) 返回的是字节数长度
 
 - 截取字符串
     - left(str, len) 返回字符串str左端len个字符
