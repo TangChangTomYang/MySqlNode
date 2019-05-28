@@ -101,6 +101,9 @@ round(1.65,1) ---> 1.7
  例:随机取出一条记录
  ```
  select *,rand() from stu order by rand() limit 1;
+ // 也可以这样写
+ select * from stu order by rand() limit 1;
+ 
  ```
  
 #### 日期时间函数
@@ -115,4 +118,31 @@ select current_date();
 ```
 select current_time();
 ```
+
      
+**3、当前日期时间 now()**   
+```
+select now();
+```
+
+  **4、日期格式化: date_format(date,format)**  
+  
+  > 参数format 可选
+  ```
+  %Y 获取年, 返回完整年
+  %y 获取年, 返回简写年份
+  %m 获取月, 返回月份
+  %d 返回日, 返回天 
+  %H 获取时, 返回24小时进制小时数
+  %h 获取时, 返回12进制小时数
+  %i 获取分钟, 返回分钟数
+  %s 获取秒, 返回秒数
+  ```
+  
+  例:将使用-拼接的日期转换为使用空格拼接
+  ```
+  select date_format('2016-12-21', '%Y %m %d');
+  
+  ```
+  
+  
