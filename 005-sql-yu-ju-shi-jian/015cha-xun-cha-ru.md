@@ -17,6 +17,9 @@ insert into goodsCate(cate_name) select distinct cate from goods
 
 **语法:**
 > create table ... select ...
+特点: 如果查询出来的数据字段, 在新建的表中有,就直接插入
+如果查出来的数据字段,在新建的表中没有, 就会新建一个字段并且插入
+即: 具体插入那一列, 就看 名字是否一样, 不一样就新建字段
 
 ```
 //一条语句, 直接将查询的数据插入新建的表中
@@ -25,4 +28,18 @@ create table goods_brand(
     brand_name varchar(10)
 )
 select distinct brand_name from goods;
+```
+
+
+
+<br>
+**3、 直接使用 sql 语句备份一张表**
+
+**语法:**
+> create table ... select ...
+
+
+```
+// 查询到的什么字段就创建字段, 一模一样
+create table goods_bak select * from goods;
 ```
