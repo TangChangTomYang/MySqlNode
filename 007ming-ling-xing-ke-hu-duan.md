@@ -37,4 +37,10 @@ desc 表名;
 show create table 表名;
 ```
 
+<br>
+**6、 中文乱码解决方案**
+```
+set charset gbk;
+// 再执行其它语句就不乱了
+```
 
