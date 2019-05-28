@@ -43,3 +43,30 @@ select distinct brand_name from goods;
 // 查询到的什么字段就创建字段, 一模一样
 create table goods_bak select * from goods;
 ```
+
+
+
+
+<br>
+**4、 使用一个表的字段更新另一个标的字段**
+
+
+```
+// 这个是一般的查询
+select 
+    * 
+from 
+    table goods
+inner join goods_cate on goods.cate=goods_cate.cate_name
+
+
+// 稍作调整就可以更新了
+
+1>把前面的select * from  改为 update
+2> 在后天添加要更新的字段
+
+
+update goods
+inner join goods_cate on goods.cate=goods_cate.cate_name
+set goods.cate=goods_cate.id; // 搞定
+```
