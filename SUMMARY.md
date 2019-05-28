@@ -22,5 +22,6 @@
   * [012-自关联](005-sql-yu-ju-shi-jian/012zi-guan-lian.md)
   * [013-子查询](005-sql-yu-ju-shi-jian/013zi-cha-xun.md)
   * [014-查询演练-子查询](005-sql-yu-ju-shi-jian/014cha-xun-yan-7ec3-zi-cha-xun.md)
+  * [015-查询插入](005-sql-yu-ju-shi-jian/015cha-xun-cha-ru.md)
   * [查询练习](005-sql-yu-ju-shi-jian/cha-xun-lian-xi.md)
 
