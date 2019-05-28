@@ -28,4 +28,5 @@
   * [001-命令行客户端](006-mysql-gao-ji/001ming-ling-xing-ke-hu-duan.md)
   * [002-命令行备份与恢复数据库](006-mysql-gao-ji/002ming-ling-xing-bei-fen-yu-hui-fu-shu-ju-ku.md)
   * [003-函数](006-mysql-gao-ji/003han-shu.md)
+  * [004-流程控制](006-mysql-gao-ji/004liu-cheng-kong-zhi.md)
 
