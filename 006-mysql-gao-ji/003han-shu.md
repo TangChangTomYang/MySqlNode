@@ -27,4 +27,14 @@ select substring('abc123',2,3);
 - 去除空格
     - ltrim(str) 返回删除了左空格的字符串str
     - rtrim(str) 返回删除了右空格的字符串str
+ 
     
+       
+          
+#### 综合示例
+
+```
+// 这样, 就可以直接返回查询后拼接的数据了
+select name,age, concat(name ,'的年龄是: ', age ) from stu where age < 30;
+```
+     
