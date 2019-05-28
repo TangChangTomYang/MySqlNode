@@ -39,9 +39,12 @@ select * from stu where length(name)=6;
  - right(str, len) 返回字符串右端len个字符
  - substring(str,pos, len) 返回字符串str 的位置pos开始len个字符
     
-    
+**格式:**
+> select substring('abc123',2,3);
+ 
+例: 网站上很多,名字不显示全, 都显示的是 张xxx 等
 ```
-select substring('abc123',2,3);
+select name, sex, concat(substring(name,0,3), sex) from stu ;
 ```
 
 
