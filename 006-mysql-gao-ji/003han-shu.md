@@ -53,6 +53,8 @@ select name, sex, concat(substring(name,0,3), sex) from stu ;
 **4、去除空格**
 - ltrim(str) 返回删除了左空格的字符串str
 - rtrim(str) 返回删除了右空格的字符串str
+- trim(str)  返回删除了左右空格的字符串str
+
 
  **格式:** 
  > select ltrim('   abc   ');
@@ -77,9 +79,40 @@ select name, sex, concat(substring(name,0,3), sex) from stu ;
  
 ** 格式:**
 > select round(n,d); // n表示的是原数, d 表示的是小数位数默认为0
+这个四舍五入,会把多余的位数进行4舍五入, 
+比如: round(1.61,1) ---> 1.6
+round(1.65,1) ---> 1.7
 
 
 **2、求 x的y次幂 pow(x,y)**       
+ > pow(2,3) --> 8
  
+ 
+ **3、获取圆周率**
+ ```
+ select PI();
+ ```
+ 
+ **4、随机数, rand(), 置位 0~1.0**
+ ```
+ select rand();
+ ```
+ 
+ 例:随机取出一条记录
+ ```
+ select *,rand() from stu order by rand() limit 1;
+ ```
+ 
+#### 日期时间函数
 
+**1、当前日期: current_date()**
+```
+select current_date();
+```
+
+
+**2、当前时间: current_time()**
+```
+select current_time();
+```
      
