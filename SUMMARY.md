@@ -31,4 +31,5 @@
   * [004-流程控制](006-mysql-gao-ji/004liu-cheng-kong-zhi.md)
   * [005-自定义函数](006-mysql-gao-ji/005zi-ding-yi-han-shu.md)
   * [006-存储过程](006-mysql-gao-ji/006cun-chu-guo-cheng.md)
+  * [007-视图](006-mysql-gao-ji/007shi-tu.md)
 
