@@ -33,5 +33,5 @@
   * [006-存储过程](006-mysql-gao-ji/006cun-chu-guo-cheng.md)
   * [007-视图](006-mysql-gao-ji/007shi-tu.md)
   * [008-事物](006-mysql-gao-ji/008shi-wu.md)
-  * [009-索引](006-mysql-gao-ji/009suo-yin.md)
+  * [009-索引\(重要性能\)](006-mysql-gao-ji/009suo-yin.md)
 
