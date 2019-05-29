@@ -23,7 +23,7 @@ select name, sex
 case sex
 when '男' then concat(left(name,1), '帅哥')
 when '女' then concat(left(name,1), '美女')
-else concat(left(name,1), 'xx')  end as result // 注意; 条件语句最后必须加 end as 把字段表示出来
+else concat(left(name,1), 'xx')  end as result // 注意; 条件语句最后必须加 end as 把结果生成出来
 from stu;
 
 ```
