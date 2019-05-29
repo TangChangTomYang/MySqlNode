@@ -51,10 +51,12 @@ show create table stu;
 -- 获取名称之后, 就可以根据名称来删除外键约束
 alter table 表名 drop foreign key 外键名;
 
+
+
 alter table stu drop foreign key stu_idfk1;
 ```
 
 > 实际开发中
-很少会使用外键约束, 会极大的降低更新的效率
-
+1>很少会使用外键约束, 会极大的降低更新的效率
+2> 要删除的外键的名称不能乱写,  (show create table stu) 可以查看到, 创建外键时, 会自动生成一个外键名
 
