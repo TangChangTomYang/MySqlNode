@@ -37,6 +37,7 @@ create table stu(
 <br>
 - **方式2:**
     对已经存在的数据表设置外键约束
+    
 ```
 alert table 从表 add foreign key(从表字段) references 主表名(主表字段);
 
@@ -45,13 +46,12 @@ alter table stu add foreign key (class_id) references class(id);
 
 
 - 删除外键
+
 ```
 -- 需要先获取外键约束名称
 show create table stu;
 -- 获取名称之后, 就可以根据名称来删除外键约束
 alter table 表名 drop foreign key 外键名;
-
-
 
 alter table stu drop foreign key stu_idfk1;
 ```

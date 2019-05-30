@@ -35,4 +35,5 @@
   * [008-事物](006-mysql-gao-ji/008shi-wu.md)
   * [009-索引\(重要性能\)](006-mysql-gao-ji/009suo-yin.md)
   * [010-外键](006-mysql-gao-ji/010wai-jian.md)
+  * [011-修改密码](006-mysql-gao-ji/011xiu-gai-mi-ma.md)
 
